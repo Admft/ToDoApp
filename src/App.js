@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from "./Components/Header";
+import AddTask from "./Components/AddTask";
+import TaskList from "./Components/TaskList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <Header />
+        {/* Add margin-top to create spacing */}
+        <div className="mt-8">
+          <AddTask />
+          <TaskList />
+        </div>
+      </div>
     </div>
   );
 }
